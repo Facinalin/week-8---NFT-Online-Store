@@ -1,4 +1,4 @@
-img{
+img, i{
   max-width: 100%;
   height: auto;
   display: block;
@@ -7,12 +7,14 @@ img{
 h1, h2, h3, h4, h5, h6, h7, p, ul{
   line-height: 1.5;
   margin-bottom: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 *{
 font-family: 'Azeret Mono', monospace;
-font-family: 'Squada One', cursive;}
-
+font-family: 'Squada One', cursive, 'Paytone One', sans-serif;
+}
 
 @font-face {
   font-family: ch-font;
@@ -26,6 +28,12 @@ font-family: 'Squada One', cursive;}
   unicode-range: U+00-024F
 }
 
+@font-face {
+  font-family: en-font-s;
+  src: local(Azeret Mono), local(Paytone One);
+  unicode-range: U+00-024F
+}
+
 .ch-font{
   font-family: ch-font;
 }
@@ -34,25 +42,68 @@ font-family: 'Squada One', cursive;}
   font-family: en-font;
 }
 
-.index__h1 {
-  color:#00cc99;
-  font-size: 20px;
-  font-weight: 400;
+.en-font-s{
+  font-family: en-font-s;
 }
 
 ::placeholder{
   color: #808080;
+  width: 100%;
 }
 
-.container{
-  border: 1px solid yellowgreen;
+.navbar-input{
+  width: 220px;
 }
 
 .container-fluid{
-  border-bottom: 1px solid greenyellow;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-@media (max-width:767px){
+.container{
+  padding: 48px 24px 24px 24px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (max-width:992px){
+
+  .navbar-collapse{
+    width: 100%;
+  }
+
+.search-btn-desktop{
+  display: none;
+}
+
+.navbar-input{
+  display: none;
+}
+
+.navbar-nav{
+  width: 100%;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+  .nav-item{
+    border:none;
+
+  }
+
+.btn-wh-or{
+  margin-bottom: 32px;
+  margin-right: 12px;
+}
+
+.banner-card-txt{
+  padding: 32px 12px;
+}
+
+.mt-30{
+  margin-top: 30px;
+}
+
 .container-fluid{
   padding: 0;
 }
@@ -63,8 +114,17 @@ font-family: 'Squada One', cursive;}
   max-width: 100%;
 }
 
+.container-b{
+  width: 100%;
+  padding: 0;
+}
+
 .container-nav{
   padding: 16px 12px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-toggler-icon{
@@ -75,6 +135,10 @@ font-family: 'Squada One', cursive;}
 .fa-bars{
   display: block;
   width: 21px;
+}
+
+.recommend{
+  display: none;
 }
 
 .ranking-card{
@@ -112,11 +176,12 @@ font-family: 'Squada One', cursive;}
 
 .card-right{
   width: 75.514%;
+  border-left: none;
 }
 
 .navbar-right{
-  border-left: 0;
-  margin-left: 180px;
+  border: none;
+  margin:0 auto;
 }
 
 .btn-more-sw{
@@ -148,14 +213,25 @@ font-family: 'Squada One', cursive;}
 }
 
 .swiper-img-btn{
-  height: 232px;
+  height: 262px;
   width:100%;
   img{
     width: 100%;
-    height: 100%;
+    height: 262px;
     object-fit: cover;
   }
 }
+.swiper2{
+  display: none;
+}
+
+.fz-48{
+  font-size: 24px;
+}
+.btn-hover-pse{
+  display: none;
+}
+
 }
 
 .swiper-pagination{
@@ -165,6 +241,11 @@ font-family: 'Squada One', cursive;}
 
 .h24{
   height: 24px;
+  width: auto;
+}
+
+.h40{
+  height: 40px;
   width: auto;
 }
 
@@ -222,4 +303,238 @@ right:0px;
 .bd-placeholder-img{
   border: 8px solid $wh;
 }
+
+.selling-steps{
+  border-top: 4px solid $secondary;
+  position: relative;
+}
+
+.selling-steps::after{
+  content:'';
+  position: absolute;
+  border-top: 1px solid $secondary;
+  top:8px;
+  z-index: 5;
+  width: 100%;
+}
+
+
+.banner-card{
+  border: 1px solid $secondary;
+}
+
+@media (max-width:992px)
+{ .banner-card{
+  border-bottom: 1px solid $secondary;
+}
+
+}
+
+.recommend h1{
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
+
+.banner-pic img{
+  height: 340px;
+  width: 329px;
+  object-fit: cover;
+}
+
+.banner-pic-1 img{
+  width: 100%;
+  height: auto;
+}
+
+
+@media (min-width:993px){
+
+  .search-btn-mob{
+    display: none;
+  }
+
+  .nav-item{
+    border-left: 1px solid $secondary;
+    padding: 40px 48px;
+  }
+
+  .btn-wh-or{
+    margin: 24px;
+  }
+  .banner-card-txt{
+    padding: 48px 24px;
+  }
+.card-left-1{
+  height: 377px;
+  border-right: none;
+  position: relative;
+  img{
+    height: 100%;
+    object-fit: contain;
+  }
+  h3{
+    padding: 8px;
+    border: 1px solid $secondary;
+    font-size: 32px;
+    position: absolute;
+    background: $wh;
+    height: 64px;
+    line-height: 64px;
+    width: 64px;
+    text-align: center;
+
+  }
+}
+
+.card-left-2{
+  height: 92px;
+  img{
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.card-right-1{
+  width: 66.1%;
+  height: 92px;
+}
+
+.card-left-2{
+  width: 33.9%;
+}
+
+.card-left-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-more-sw{
+  bottom:24px;
+  right:24px;
+}
+
+.swiper-slide{
+  position: relative;
+  .caption{
+  position: absolute;
+  left:24px;
+  bottom:24px;
+  }
+}
+
+.swiper{
+  display: none;
+}
+
+.swiper-slide-side{
+  height: 262px;
+}
+
+.navbar{
+  padding: 32px 24px;
+  width: 100%;
+}
+.container{
+  padding: 40px 72px;
+}
+
+.container-b{
+  padding: 24px;
+}
+
+.fz-48{
+  font-size: 48px;
+}
+
+.navbar-brand{
+  margin: 32px 24px;
+  img{
+    width: 190px;
+    height: 40px;
+    vertical-align: bottom;
+  }
+}
+.container-nav{
+  padding-right: 72px;
+  padding-left: 72px;
+  margin: 0 auto;
+}
+
+.masonry-hover{
+  padding: 24px;
+}
+}
+
+
+
+.masonry-hover::before{
+  content: '唯一想擁有的人，唯一不可以擁有的';
+  font-size: 16px;
+  color: $wh;
+  background: $secondary;
+  opacity:0%;
+  top: 24px;
+  right: 24px;
+  left: 24px;
+  bottom: 24px;
+  position: absolute;
+  padding: 40px;
+  transition: .5s;
+}
+
+.masonry-hover:hover::before{
+  opacity:70%;
+}
+
+.masonry-hover::after{
+  content: '';
+  opacity:0%;
+  top: 40px;
+  right: 40px;
+  left: 40px;
+  bottom: 40px;
+  position: absolute;
+  padding: 16px;
+  border: 1px solid $wh;
+  transition: .5s;
+}
+
+.masonry-hover:hover::after{
+  opacity:70%;
+}
+
+.btn-hover-pse{
+  right: 56px;
+  bottom: 56px;
+  z-index: 2;
+}
+
+.btn-hover-pse:hover{
+  right: 56px;
+  bottom: 56px;
+  z-index: 10;
+}
+
+
+
+.footer{
+  border-top: 4px solid $secondary;
+  position:relative;
+
+  &::before{
+    content:'';
+    position: absolute;
+    border-top: 1px solid $secondary;
+    top:-12px;
+    z-index: 5;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
 

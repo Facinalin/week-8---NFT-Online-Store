@@ -13,6 +13,7 @@ const swiper = new Swiper('.swiper', {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 
   // Navigation arrows
@@ -22,15 +23,22 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-var elem = document.querySelector('.grid');
-var msnry = new Masonry( elem, {
-  // options
-  itemSelector: '.grid-item',
-  columnWidth: 800
+//swiper-bigger//
+var swiper2 = new Swiper(".swiper2", {
+  slidesPerView: 3,
+  spaceBetween: 24,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
-// element argument can be a selector string
-//   for an individual element
-var msnry = new Masonry( '.grid', {
-  // options
+//artist-dropdown-btn//
+
+$(function () {
+	$(".button").click(function (e) {
+		e.preventDefault();
+		$(".dropdownList").slideToggle(500);
+		$(".fa-angle-down").toggleClass("active");
+	});
 });
