@@ -1,10 +1,73 @@
----
-title: Boostrap Index
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
-<!-- artist starts --> 
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boostrap Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@700&family=Squada+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@700&family=Paytone+One&display=swap" rel="stylesheet">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+    <div class="container-fluid bg-primary border border-1 border-md-secondary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary text-secondary py-0 px-0 sticky-sm-top sticky-md-top sticky-lg-top">
+      <div class="container-nav d-flex justify-content-between align-items-center">
+        <div class="navbar-left d-flex">
+        <a class="navbar-brand mt-30" href="#"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week8-202207/logo.svg" alt="art-nft-logo"></a>
+        <form class="d-flex py-6 px-7">
+          <input class="form-control border-0 bg-primary mr-120 ch-font navbar-input" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+          <button class="search-btn-desktop btn btn-outline-or border-0" type="submit"><i class="text-secondary fa-solid fa-magnifying-glass h24"></i></button>
+        </form>
+
+          <button class="search-btn-mob navbar-toggler position-relative border border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon position-absolute"></span><i class="fa-solid fa-magnifying-glass text-secondary"></i>
+          </button>
+        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent2">
+          <form>
+          <input class="search-btn-mob form-control border-0 bg-primary ch-font" type="search" placeholder="r搜尋作品名稱、藝術家名稱" aria-label="Search">
+        </form>
+        </div>
+  
+      </div>
+        <div class="navbar-right border-md-start border-md-start-1 border-md-secondary">  
+          <button class="navbar-toggler position-relative border border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon position-absolute"></span><i class="fa-solid fa-bars text-secondary"></i>
+          </button>
+          <div class="d-sm-flex flex-sm-column">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         
+          <ul class="navbar-nav mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-bolder ch-font text-secondary" aria-current="page" href="#">探索</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bolder ch-font text-secondary" aria-current="page" href="#">市值</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="text-secondary fa-solid fa-wallet h24"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      </div>
+    </nav>
+  </div>
+
+
+    <!-- artist starts --> 
 <div class="container-fluid bg-primary">
 <div class="container row">
 <div class="col-lg-3 filter-desktop">
@@ -497,3 +560,19 @@ current: index
 </div>
 </div>
 <!-- artist ends -->
+
+    
+    <footer class="footer bg-primary px-auto">
+      <div class="py-3">
+      <h6 class="mx-auto text-center">© ART NFT. All Rights Reserved</h6>
+    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script> 
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/19d4d169f9.js" crossorigin="anonymous"></script>
+  </body>
+
+</html>
